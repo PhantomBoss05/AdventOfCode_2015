@@ -1,4 +1,4 @@
-= https://adventofcode.com/[Advent of Code 2015]
+= https://adventofcode.com/[Advent of Code] 2015
 
 This project is an exercise for me, to learn Python. +
 https://adventofcode.com/2015[Here], are all the tasks I will complete or already completed.
