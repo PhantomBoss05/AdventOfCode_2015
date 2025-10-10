@@ -1,9 +1,9 @@
 from Inputs.Reader import Reader
 floor: int = 0
 temp: int = 0
-length: int = 0
+length: int
 name: str = 'input01.1.txt'
-path: str = Reader.read(name)
+path: str = Reader(name).read_txt_to_str()
 length = len(path)
 
 while temp < length:
