@@ -2,13 +2,8 @@ from Inputs.Reader import Reader
 
 name: str = "input02.1.txt"
 length: int
-l: bool = False
 width: int
-w: bool = False
 height: int
-h: bool = False
-smallest01: int = 0
-smallest02: int = 0
 qm_sides: list = []
 
 qm: int = 0
