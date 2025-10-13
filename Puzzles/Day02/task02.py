@@ -1,6 +1,6 @@
 from Inputs.Reader import Reader
 
-name: str = "input02.1.txt" #"test.txt"
+name: str = "input02.1.txt"
 length: int
 width: int
 height: int
