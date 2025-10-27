@@ -33,7 +33,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         elif line[2].isdigit():
             try:
@@ -41,7 +41,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         else:
             try:
@@ -49,7 +49,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
 
     if "OR" in line:
@@ -59,7 +59,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         elif line[2].isdigit():
             try:
@@ -67,7 +67,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         else:
             try:
@@ -75,7 +75,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
 
     if "NOT" in line:
@@ -85,7 +85,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         else:
             try:
@@ -93,7 +93,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
 
 
@@ -104,7 +104,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         elif line[2].isdigit():
             try:
@@ -112,7 +112,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         else:
             try:
@@ -120,7 +120,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
 
     if "RSHIFT" in line:
@@ -130,7 +130,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         elif line[2].isdigit():
             try:
@@ -138,7 +138,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         else:
             try:
@@ -146,7 +146,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
     else:
         if line[1].isdigit():
             try:
@@ -154,7 +154,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
         else:
             try:
@@ -162,7 +162,7 @@ while i < len(instruction):
                 i += 1
             except TypeError:
                 instruction.append(instruction.pop(0))
-                #i += -1
+
                 continue
 
 print(gates['a'])
