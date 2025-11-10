@@ -39,4 +39,4 @@ for perm in itertools.permutations(staedte):
     all_routs.append(get_route(all_cities, distance))
     all_cities.clear()
 
-print(max(all_routs)) #736
+print(min(all_routs)) #736
