@@ -1,6 +1,6 @@
 from Inputs.Reader import Reader
 from collections import defaultdict
-from reindeer import Reindeer
+from Inputs.reindeer import Reindeer
 from threading import Thread
 from tqdm import tqdm
 import time as ti
@@ -9,14 +9,13 @@ name: str = "input14.1.txt"
 document = Reader(name).read_txt_to_str()
 key: int = 0
 temp_name: str = "\0"
-position: int = 0
 
-def run(speed: int, sleep: int, endurance: int, name_reindeer: str, result_race: defaultdict, pos: int):
+def run(speed: int, sleep: int, endurance: int, name_reindeer: str, result_race: defaultdict):
     time: int = 2503
     distance: int = 0
     i: int = 0
     j: int = 0
-    pbar = tqdm(total=time, desc=f"{name_reindeer}\t", position=pos, bar_format= '{desc}: |{bar}| {percentage:3.0f}%')
+    pbar = tqdm(total=time, desc=f"{name_reindeer}\t", position=0, bar_format='{desc}: |{bar}| {percentage:3.0f}%')
 
     while 0 < time:
         while i < endurance:
@@ -50,18 +49,18 @@ for line in tqdm(document, desc="Reading", position=0, leave=False, bar_format= 
     reindeer[key].set_endurance(int(line[6]))
     reindeer[key].set_sleep(int(line[13]))
     key += 1
+    ti.sleep(0.1)
 
 threads = []
 for n in range(len(reindeer)):
-    t = Thread(target=run, args=(reindeer[n].get_speed(), reindeer[n].get_sleep(), reindeer[n].get_endurance(), reindeer[n].get_name(), result, position))
-    position += 1
+    t = Thread(target=run, args=(reindeer[n].get_speed(), reindeer[n].get_sleep(), reindeer[n].get_endurance(), reindeer[n].get_name(), result))
     t.start()
     threads.append(t)
 
 for t in threads:
     t.join()
 
-print(max(result.values()))
+print(max(result.values())) #2655
 
 
 
