@@ -3,7 +3,6 @@ import os
 class Reader:
     def __init__(self, file):
         self.file = file
-        self.line: str
     def read_txt_to_str(self) -> str:
         file = os.path.join(os.path.dirname(os.path.realpath(__file__)), self.file)
         with open(file, 'r', encoding='utf-8') as f:
